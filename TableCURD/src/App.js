@@ -16,7 +16,7 @@ class App extends Component {
     let i=this.refs.tbl.rows.length
     console.log(this.refs.num.value)
     let num=this.refs.num.value
-    let row = this.refs.tbl.insertRow(i-2); // i is now dynamic
+    let row = this.refs.tbl.insertRow(i-1); // i is now dynamic
     let cell0 = row.insertCell(0);
     cell0.innerHTML = num;
     this.refs.num.value=''
@@ -39,13 +39,9 @@ class App extends Component {
     cell3.innerHTML = mail;
     this.refs.mail.value=''
 
-
-
-
-
-    console.log(this.refs.fname.value)
-
-
+    let cell4 = row.insertCell(4);
+    cell4.innerHTML = "<Button bsStyle='primary' ref='one' onclick={this.edit}> Edit </Button>";
+    i++
   }
 
   render() {
@@ -67,21 +63,30 @@ class App extends Component {
          <td>Mark</td>
          <td>Otto</td>
          <td>mark@mdo</td>
+           <td>
+               <ButtonToolbar>
+               <Button bsStyle="primary" onClick={this.edit}>Edit</Button>
+               <Button bsStyle="danger" onClick={this.delete}>Delete</Button>
+               </ButtonToolbar>
+              </td>
        </tr>
        <tr>
          <td>2</td>
          <td>Jacob</td>
          <td>Thornton</td>
          <td>Jacob@fat</td>
+           <td>
+               <ButtonToolbar>
+               <Button bsStyle="primary" onClick={this.edit}>Edit</Button>
+               <Button bsStyle="danger" onClick={this.delete}>Delete</Button>
+               </ButtonToolbar>
+              </td>
        </tr>
        <tr>
          <td><input type="text" ref="num" placeholder="Enter #" value={this.state.value}></input> </td>
         <td> <input type="text" ref="fname" placeholder="Enter First Name"></input></td>
           <td><input type="text" ref="lname" placeholder="Enter Last Name"></input> </td>
          <td> <input type="email" ref="mail" placeholder="Enter email"></input></td>
-       </tr>
-       <tr>
-         <td colSpan="3"></td>
          <td><Button bsStyle="primary" onClick={this.save}>Save</Button></td>
        </tr>
      </tbody>
