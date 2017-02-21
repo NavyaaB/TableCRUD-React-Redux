@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import {Table,Button} from 'react-bootstrap';
+import {Table,Button,ButtonToolbar} from 'react-bootstrap';
 import './App.css';
 class App extends Component {
   constructor(props){
     super(props)
-  //  this.state={value: ''}
     this.state={table:""}
 
     this.save=this.save.bind(this)
@@ -40,8 +39,11 @@ class App extends Component {
     this.refs.mail.value=''
 
     let cell4 = row.insertCell(4);
-    cell4.innerHTML = "<Button bsStyle='primary' ref='one' onclick={this.edit}> Edit </Button>";
+    cell4.innerHTML = "<Button onclick={this.edit.bind(this,item)}> Edit </Button>";
     i++
+  }
+  edit(){
+    console.log("hi")
   }
 
   render() {

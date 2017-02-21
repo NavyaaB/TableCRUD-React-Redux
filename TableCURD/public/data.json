@@ -1,0 +1,22 @@
+[{
+  "id":1,
+  "fname":"apple",
+  "lname":"fruit",
+  "mail":"aple@gmail.com"
+  },{
+    "id":2,
+    "fname":"pineapple",
+    "lname":"fruit",
+    "mail":"pineaple@gmail.com"
+  },{
+    "id":3,
+    "fname":"greenapple",
+    "lname":"fruit",
+    "mail":"greenaple@gmail.com"
+  },{
+    "id":4,
+    "fname":"pinkapple",
+    "lname":"fruit",
+    "mail":"pinkaple@gmail.com"
+    }
+]

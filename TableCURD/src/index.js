@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import TableCrud from './TableCrud';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <TableCrud />,
   document.getElementById('root')
 );
